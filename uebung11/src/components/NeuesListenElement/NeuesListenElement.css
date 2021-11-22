@@ -1,0 +1,7 @@
+.todo-component__header-input {
+    display: grid;
+    grid-template-columns: 95% auto;
+    margin-right: auto;
+    margin-left:  auto;
+    padding: 1.5em;
+}

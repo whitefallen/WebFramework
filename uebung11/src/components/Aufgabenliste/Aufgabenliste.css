@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    margin: auto;
+    max-width: 1280px;
+}
+
+div.hidden {
+    display: none;
+}
+
+.todo-component {
+    width: 50%;
+    max-width: 50%;
+    font-size: 18px;
+}
+
+.todo-component__header-container {
+    border: lightgrey 1px solid;
+}
+
+.todo-component__header-title {
+    background: rgb(238,239,239);
+    background: linear-gradient(180deg, rgba(238,239,239,1) 0%, rgba(213,235,235,1) 50%, rgba(238,239,239,1) 100%);
+    margin-right: auto;
+    margin-left:  auto;
+    padding:  1em;
+    border: lightgrey 1px solid;
+}

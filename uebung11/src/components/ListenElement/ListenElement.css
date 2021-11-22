@@ -1,0 +1,23 @@
+.entry-readonly {
+    display: grid;
+    grid-template-columns: 80% auto auto;
+    margin-right: auto;
+    margin-left:  auto;
+    padding: 1em 1.5em;
+    border: lightgrey 1px solid;
+}
+
+.entry-editable {
+    margin-right: auto;
+    margin-left:  auto;
+    padding: 1em 1.5em;
+    border: lightgrey 1px solid;
+}
+.entry-editable form {
+    display: grid;
+    grid-template-columns: 80% auto auto;
+}
+
+.entry-editable input {
+    width: 70%;
+}

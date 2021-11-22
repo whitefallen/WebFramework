@@ -1,0 +1,7 @@
+.counterContent {
+    display: grid;
+    grid-template-columns: 90% auto;
+}
+.counterContainer {
+    width: 50%;
+}
