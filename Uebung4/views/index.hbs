@@ -1,0 +1,37 @@
+<h1>{{title}}</h1>
+<p>Welcome to {{title}}</p>
+{{#if message}}
+    <div class="errorMessage">{{message}}</div>
+    <br>
+{{/if}}
+{{#if warehouses}}
+<table class="warehouses">
+    <tr>
+        <th>
+            Warehouse Nr#
+        </th>
+        <th>
+            Products in Warehouse
+        </th>
+        <th>
+            Actions
+        </th>
+    </tr>
+    {{#each warehouses}}
+        <tr>
+            <td>
+                {{this.id}}.
+            </td>
+            <td>
+                {{this.products.length}} / 5
+            </td>
+            <td>
+                <a href="/api/warehouse/{{this.id}}/list-products"><button>Detail</button></a>
+                <a href="/api/warehouse/{{this.id}}/add-product"><button>Add</button></a>
+            </td>
+        </tr>
+    {{/each}}
+</table>
+{{/if}}
+
+

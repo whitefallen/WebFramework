@@ -1,0 +1,41 @@
+<% if @product %>
+  <h1>Produkt - <%= @product.name %> details</h1>
+  <table>
+    <tr>
+      <th>
+        ID
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Product_Number
+      </th>
+      <th>
+        Price
+      </th>
+      <th>
+        Action
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <%= @product.id %>
+      </td>
+      <td>
+        <%= @product.name %>
+      </td>
+      <td>
+        <%= @product.product_number %>
+      </td>
+      <td>
+        <%= @product.price %>
+      </td>
+      <td>
+        <a href="/product_management/modify/?id=<%= @product.id %>">Edit</a>
+      </td>
+    </tr>
+  </table>
+  <%= %>
+<% end %>
+<a href="/product_management/show">Zurück zur übersicht</a>

@@ -1,5 +1,5 @@
 {
-  "name": "uebung10",
+  "name": "uebung5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,8 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^4.0.2"
+  "dependencies": {
+    "async": "^3.2.0",
+    "lodash": "^4.17.20"
   }
 }

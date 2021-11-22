@@ -1,0 +1,29 @@
+<h1>Warehouse Details</h1>
+{{#if message}}
+    <div class="errorMessage">{{message}}</div>
+    <br>
+{{/if}}
+
+{{#if warehouse.products }}
+    <table class="warehouses">
+    {{#each warehouse.products}}
+        <tr>
+            <th>ID</th>
+            <th>AtricleId</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>
+                Action
+            </th>
+        </tr>
+        <tr>
+            <td>{{this._id}}</td>
+            <td>{{this.articleId}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.price}}</td>
+            <td><a href="/api/warehouse/{{../warehouseId}}/delete-product/{{this._id}}"><button>Delete</button></a></td>
+        </tr>
+    {{/each}}
+    </table>
+{{/if}}
+<a href="/"><button>Back to Overview</button></a>

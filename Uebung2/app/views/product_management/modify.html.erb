@@ -1,0 +1,10 @@
+<h1>ProductManagement#modify</h1>
+<% if @product %>
+  <form action="/product_management/modify/" method="get">
+    <input type="text" name="id" hidden value="<%= @product.id %>">
+    <input type="text" name="name" value="<%= @product.name %>">
+    <input type="text" name="price" value="<%= @product.price %>">
+    <button type="submit">Submit</button>
+  </form>
+<% end %>
+

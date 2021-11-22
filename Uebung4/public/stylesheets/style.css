@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.warehouses td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid black;
+}
+.warehouses {
+  border: 1px solid black;
+}
+
+.errorMessage {
+  background: darkred;
+  color: whitesmoke;
+  display: inline-block;
+}

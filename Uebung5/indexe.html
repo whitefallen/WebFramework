@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+    <head>
+    </head>
+    <body>
+      <script src="node_modules/async/dist/async.js"></script>
+      <script src="node_modules/lodash/lodash.js"></script>
+      <script>
+        let participants = [{name: 'Egon', age: 17},
+                  {name: 'Marlies', age: 78},
+                  {name: 'Heinz', age: 67},
+                  {name: 'Rainer', age: 83},
+                  {name: 'Kurt', age: 22},
+                  {name: 'Marie', age: 7},
+                  {name: 'Marc', age: 13},
+                  {name: 'Klaus', age: 22}];
+        console.log(_.map(_.filter(_.shuffle(participants), participant => participant.age >= 18).slice(0,3), 'name'));
+        /** Aufgabe 2 **/
+        let readImage = function (filename, callback) {
+          setTimeout(() => {
+            console.log('readImage', filename)
+            callback(null)
+          }, 100)
+
+        }
+        let compressImage = function (filename, callback) {
+          setTimeout(() => {
+            console.log('compressImage', filename)
+            callback(null)
+          }, 3000)
+
+        }
+        let saveImage = function (filename, callback) {
+          setTimeout(() => {
+            console.log('saveImage', filename)
+            callback(null)
+          }, 6000)
+
+        }
+        let saveCompressedImage = function (filename,callback) {
+          setTimeout(() => {
+            console.log('saveCompressedImage', filename)
+            callback(null)
+          }, 100)
+
+        }
+        async.series(
+          [
+            async.apply(readImage, 'test.png'),
+            function () {
+              async.parallel([
+                async.apply(saveImage, 'test.png'),
+                function() {
+                  async.series([
+                    async.apply(compressImage, 'test.png'),
+                    async.apply(saveCompressedImage, 'test.png')
+                  ])
+                }
+              ])
+            }
+        ],
+        function(err, result) {
+            if(err) {
+              console.log(err);
+            }
+            console.log(result);
+        })
+      </script>
+    </body>
+</html>

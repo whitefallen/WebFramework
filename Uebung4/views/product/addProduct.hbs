@@ -1,0 +1,20 @@
+<h1>Add Product</h1>
+{{#if message}}
+    <div class="errorMessage">{{message}}</div>
+    <br>
+{{/if}}
+<form method="post" action="/api/warehouse/{{warehouseId}}/add-product">
+    <div>
+        <label for="name">Name:</label><input id="name" type="text" name="name"/>
+    </div>
+    <div>
+        <label for="price">Price:</label><input id="price" type="number" name="price"/>
+    </div>
+    <div>
+        <label for="articleId">ArticleId:</label><input id="articleId" type="number" name="articleId"/>
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+<a href="/"><button>Back to Overview</button></a>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <link href="styles/style.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Title</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <form class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input type="text" name="name" id="nameInput" required class="form-control">
+          <div class="valid-feedback">
+            Sieht gut aus!
+          </div>
+          <div class="invalid-feedback">
+            Bitte gebe dein Namen ein!
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="ageInput" class="form-label">Alter</label>
+          <input type="number" name="age" id="ageInput" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="mailInput" class="form-label">Email-Adresse</label>
+          <input type="email" name="mail" id="mailInput" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="bellInput" class="form-check-label">Benachrichtigung(Ja/nein)</label>
+          <input type="checkbox" name="bell" id="bellInput" class="form-check-input">
+        </div>
+        <button type="submit" class="btn btn-primary">Absenden</button>
+      </form>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<h1>Show all Products</h1>
+<table>
+  <tr>
+    <th>
+      ID
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Product_Number
+    </th>
+    <th>
+      Price
+    </th>
+    <th>
+      Action
+    </th>
+  </tr>
+  <% @products.each do |product| %>
+    <tr>
+      <td>
+        <%= product.id %>
+      </td>
+      <td>
+        <%= product.name %>
+      </td>
+      <td>
+        <%= product.product_number %>
+      </td>
+      <td>
+        <%= product.price %>
+      </td>
+      <td>
+        <a href="/product_management/show_detail/?id=<%= product.id %>">Details</a>
+        <a href="/product_management/modify/?id=<%= product.id %>">Edit</a>
+        <a href="/product_management/delete/?id=<%= product.id %>">Delete</a>
+        <!-- <%= link_to "Details", product_management_show_detail_path({:id=>product.id}) %> -->
+      </td>
+    </tr>
+  <% end %>
+</table>
+<a href="/product_management/add">Add new Product</a>
